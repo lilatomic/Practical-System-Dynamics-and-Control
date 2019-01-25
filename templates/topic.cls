@@ -1,8 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lilatomic-topic}[Class for the topics Lilatomic uses]
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrbook}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions
-\LoadClass{scrbook}
+\LoadClass{article}
+
+\usepackage{amsmath}
+\usepackage[framed & numbered & autolinebreaks & useliterate]{mcode}
 
 \endinput
