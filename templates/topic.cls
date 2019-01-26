@@ -7,11 +7,17 @@
 
 \usepackage{amsmath}
 \usepackage{mathtools}
-\usepackage[framed & numbered & autolinebreaks & useliterate]{mcode}
+\usepackage{mcode}
+\usepackage{amssymb}
 
 % Math Symbols
 
 \def\laplace{L\mathclap{\rightarrow}\ }
 \def\ilaplace{L\mathllap{\leftarrow}\ }
+\def\ustep{\Rsh\mathllap{u} }
+\def\impulse{\upharpoonleft\mathllap{\delta}}
+
+
+
 
 \endinput
