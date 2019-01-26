@@ -1,0 +1,28 @@
+\documentclass{../templates/topic}
+
+\title{Transfer Functions}
+\author{Daniel "lilatomic" Goldman}
+
+\maketitle
+
+\begin{document}
+
+\begin{section}{Definition}
+	The transfer function is defined as:
+	\begin{equation}
+		G(s) = \frac{\laplace[Output]}{\laplace[Input]}
+	\end{equation}
+	
+	For a system defined as $\{a_{n}*D_{n}[y] \} = \{b_{m}*D_{m}[x] \}$ where y is the output and x is the input, the transfer function is given as:
+	
+	\begin{equation}
+		G(s) = \frac{Y(s)}{X(s)} = \frac{\{a_{n}*s^{n}\}}{\{b_{m}*s^{m}\}}
+	\end{equation}
+	
+	Note that the transfer function is not unique; there are many systems which reduce to the same transfer function.
+	Note also that the transfer function is not tied to the input function.
+	The transfer function does not provide information about the physical system underlying the model, and many different systems with different physical quantities being studied can have the same transfer function.
+	
+\end{section}
+
+\end{document}
