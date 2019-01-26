@@ -1,0 +1,95 @@
+\documentclass{../templates/topic}
+
+\title{1:Block Diagrams}
+\author{Daniel "lilatomic" Goldman}
+
+
+\begin{document}
+
+\maketitle
+\section{Definition}
+There are several basic elements in a block diagram:
+
+\begin{itemize}
+	\item Summing Junction
+	\item Branch or Takeoff Junction
+	\item Function Block
+\end{itemize}
+
+\subsection{MIMO}
+
+Some blocks are Multi-Input-Multi-Output (MIMO).
+These blocks are actually composed of a matrix of functions, with a function for each input-output pair.
+
+For example, a block with $I_0$ and $I_1$ inputs and $O_0$ and $O_1$ outputs has:
+
+\begin{align*}
+	O_0 &= G_{00}I_0 + G_{01}I_1 \\
+	O_1 &= G_{10}I_0 + G_{11}I_1
+\end{align*}
+
+
+
+\section{Operations}
+
+Many common graphical modifications have equivalent mathematical operations, allowing us to simplify a diagram. Presented here are several of the more common, listed by their graphical operation.
+
+\subsection{Series Multiplication}
+
+Blocks in series can be multiplied together.
+
+\subsection{Parallel Addition}
+
+Blocks in parallel can simply be added
+
+\subsection{Move Summing Junction Before Function}
+
+The reciprocal of the function must be applied to the signal to keep it equivalent.
+
+\begin{equation*}
+	aG + b = G(a+bG^{-1})
+\end{equation*}
+
+\subsection{Move Summing Junction After Function}
+
+The Function must be distributed to both signals.
+
+\begin{equation*}
+	(a+b)*G = aG+bG
+\end{equation*}
+
+\subsection{Move Takeoff Junction Before Function}
+
+The Function must be distributed to both signals.
+
+\subsection{Move Takeoff Junction After Function}
+
+The reciprocal of the Function must be applied to keep the signal equivalent.
+
+\begin{equation*}
+	a = (G*a)*G^{-1}
+\end{equation*}
+
+\subsection{Eliminate Feedback Loop}
+
+A Feedback Loop can be reduced to the combined transfer function:
+
+\begin{equation}
+	\frac{G}{1+GH}
+\end{equation}
+
+This assumes a negative feedback loop.
+
+\section{Converting Models}
+
+The easiest way to convert a physical model to a block diagram is:
+\begin{enumerate}
+	\item Build the mathematical model of the system. Consider using FBD or equivalent
+	\item Convert each operation into its corresponding block
+	\item Combine blocks to form chains. For example, the second integral of acceleration can use the output from the first integral of acceleration. This step can be done intuitively at the same time as the previous one.
+	\item Take the Laplace transform
+	\item Combine and simplify to one Transfer Function
+\end{enumerate}
+
+
+\end{document}_
