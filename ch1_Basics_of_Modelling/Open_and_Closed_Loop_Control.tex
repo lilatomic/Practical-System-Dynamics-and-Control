@@ -7,8 +7,14 @@
 \begin{section}{Open Loop Control}
 	Open Loop Control systems do not feed the information of the process results back to the controller. That is to say the actual result does not influence the action taken by the controller.
 	
-	It might seem like this would be a really bad control system. After all, it can't take into account disturbances to the state of the system and has no way of addressing drift of the system. However, if the system is well understood and the controller is calibrated to the specifics of the system, results can be pretty decent. For example, stepper motors rotate in discrete steps, so a controller can simply count the steps it bade the motor to take. This gives it confidence in the motor's position and velocity despite not having feedback on it. Another example of a partial open loop is a water heater which only heats a reservoir and does not monitor the temperature of the outflow where it is used. If the heat losses from reservoir are well understood, the controller can have a good guess at what the reservoir temperature needs to be for the actual temperature of the outflow to be as desired.
+	It might seem like this would be a really bad control system. After all, it can't take into account disturbances to the state of the system and has no way of addressing drift of the system. However, if the system is well understood and the controller is calibrated to the specifics of the system, results can be pretty decent.
+	
+	For example, stepper motors rotate in discrete steps, so a controller can simply count the steps it bade the motor to take. This gives it confidence in the motor's position and velocity despite not having feedback on it. Another example of a partial open loop is a water heater which only heats a reservoir and does not monitor the temperature of the outflow where it is used. If the heat losses from reservoir are well understood, the controller can have a good guess at what the reservoir temperature needs to be for the actual temperature of the outflow to be as desired.
 \end{section}
+
 \begin{section}{Closed Loop Control}
 	In contrast, Closed Loop Control systems have a mechanism for feedback. This gives a mechanism to communicate unanticipated error back to the controller. Unanticipated error includes disturbances to the system, system drift, miscalibration, and linearisation errors, among others.
+	
+	For example, encoders on the joints of a robotic arm would report the actual positions of the links. This would allow the controller to account for the arm bumping into something, the motors having backlash, the effects of friction, and so on.
+\end{section}
 \end{document}
