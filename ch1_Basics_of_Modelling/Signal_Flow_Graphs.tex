@@ -1,0 +1,84 @@
+\documentclass{../templates/topic}
+
+\title{Signal Flow Graphs}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+
+\begin{section}{Definitions}
+	Mixed node: A node with incoming and outgoing branches
+\end{section}
+
+\begin{section}{Definition}
+	The most succinct way of describing an SFG is as a Block Diagram but where we view the edges as vertices and the vertices as edges. That is: In a Block Diagram, the nodes of the graph are the functional blocks, and the edges between them are signals. The Block Diagram places emphasis on the functional blocks, with the signals passed between them relegated to second thought. The SFG instead views the signals as the important thing, and the functional blocks are the way to get from one signal to another.
+
+% TODO: an example
+
+\end{section}
+
+\begin{section}{Operations}
+	
+	% TODO: Signal_Flow_Graphs::Operations add figures
+	
+	\subsection{Series Multiplication}
+	
+		A Cascade can be eliminated. The new edge is the product of the eliminated cascade.
+	
+	\subsection{Parallel Addition}
+	
+		Two edges between the same nodes can be combined. The resulting edge is the sum of the two.
+	
+	\subsection{Unzip Y Node}
+	
+		If a node functions as a summing junction, the summing can be moved to after the next edge by ditribution of the function of the edge.
+	
+	\subsection{Zip Y Node}
+	
+		If a node functions as a summing junction and the previous edges have the same value, the edges can be joined and the summing junction moved previous.
+	
+	\subsection{Collapse Y Node}
+	
+		If a node functions as a summing junction and has only one output, the function of the output can be distributed to the input functions, and then edge associated with it thereby eliminated.
+		
+	\subsection{Split X Node}
+		If a node has multiple inputs and multiple outputs, the node can be replicated with each replicate having one of the outputs.
+	
+	\subsection{Collapse 1-Loop to Self-Loop}
+	
+		An pair of vertexes with only a forward edge and a feedback edge between them can be collapsed to a single vertex. The procedure is to view the first vertex as a Y Node with the feedback edge as one of its inputs. Collapse Y Node is then used. This will create a Self-Loop.
+	
+	\subsection{Eliminate Self-Loop}
+		
+		A node with an input $a$ and a feedback output to itself $c$ can be reduced to a single-input node. The input edge then has the value:
+		\begin{equation*}
+			\frac{a}{1-c}
+		\end{equation*}
+	
+	\subsection{Eliminate Loop}
+	
+		As a prepared procedue, a 1-Loop can be quickly eliminated in one action: for input $a$, forward $b$, and feedback $c$, the loop node and edges can be eliminated. In their place, the input edge now has the value:
+		\begin{equation*}
+			\frac{ab}{1-bc}=\frac{a}{1/b-c}
+		\end{equation*}
+	
+\end{section}
+
+\begin{section}{Converting Block Diagrams}
+	% TODO: Signal_Flow_Graphs::Converting_Block_Diagrams
+\end{section}
+
+\begin{section}{Drawing from Equations}
+	
+	Usually, you won't have to do this. If you do, here are a few tricks:
+	
+	\begin{itemize}
+		\item Just do it. The equations will describe exactly what needs to get done.
+		\item If things get busy, consider beginning by making a separate diagram for each equation. If you put the nodes in the same places in each graph, combining the graphs will be straightforward
+	\end{itemize}
+	
+\end{section}
+
+
+
+\end{document}
