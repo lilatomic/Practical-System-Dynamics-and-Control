@@ -1,0 +1,61 @@
+\documentclass{../templates/mathtool}
+
+\title{Laplace Transforms}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+
+\maketitle
+
+\begin{section}{Definition}
+	
+	The mathematical definition of the $\laplace$ is
+	\begin{equation}
+		F(s) = \laplace[f(t)] = \int_0^\infty[f(t)e^{-st}]dt
+	\end{equation}
+	
+\end{section}
+
+\begin{section}{Useful Description}
+	
+	The $\laplace$ moves functions from the Time Domain to the Frequency Domain. This has the added effect of transforming convolution integrals into simple multiplication. This makes solving the underlying DE much easier.
+	
+	$\laplace$ are very effective at resolving the Frequency Dynamics of a system. The $\ilaplace$ can also be used to turn a solution in the Frequency Domain into one in the Time Domain.
+	
+\end{section}
+
+\begin{section}{Neato Math Properties}
+	\subsection{Linearity}
+		\begin{equation*}
+			\laplace[a \cdot f_1(t) + b \cdot f_2(t)] = \laplace[a \cdot f_1(t)] + \laplace[b \cdot f_2(t)]
+		\end{equation*}
+	
+	\subsection{Differentiation}
+		\begin{align*}
+			\laplace[\frac{d}{dt}[f(t)]] &= s \cdot F(s)-f(0) \\
+			\laplace[\frac{d^2}{dt^2}[f(t)]] &= s^2 \cdot F(s)- s \cdot f(0) -\dot{f}(0) \\
+			\laplace[\frac{d^n}{dt^n}[f(t)]] &= s^n F(s) - \sum_1^n s^{n-i} f^{'i-1}
+		\end{align*}
+	
+	\subsection{Integration}
+		\begin{align*}
+			\laplace[\int_{0}^{t}[f(\lambda)]d\lambda] &= \frac{1}{s}F(s)
+		\end{align*}
+\end{section}
+
+\begin{section}{Initial and Final Value Theorems}
+	\begin{subsection}{Initial Value Theorem}
+		\begin{equation}
+			f(0^+) = \lim_{s\to\infty}[s \cdot F(s)]
+		\end{equation}
+	\end{subsection}
+	
+	\begin{subsection}{Final Value Theorem}
+		\begin{equation}
+			f(\infty) = \lim_{s\to0}[s \cdot F(s)]
+		\end{equation}
+	\end{subsection}
+	
+\end{section}
+
+\end{document}
