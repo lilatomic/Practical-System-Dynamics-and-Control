@@ -1,0 +1,43 @@
+\documentclass{../templates/topic}
+
+\title{Mason's Gain Rule}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+
+\begin{section}{Definition}
+	
+	Given a SFG, Mason's gain rule provides a catchall formula for evaluating the gain of a system. It uses a generalised form of the SFG simplifications to allow you to replace what would have take a little ingenuity with a lot of accounting.
+	
+	The amount of accounting rises little with complexity, but the amount of ingenuity rises dramatically, so occasionally it's useful.
+	
+	The total gain between node $i$ and $j$ is given as:
+	
+	\begin{equation}
+		T_{ij} = \frac{\sum_{k}P_{k}\Delta_{k}}{\Delta_{\bullet}}
+	\end{equation}
+	
+	where
+	\begin{align*}
+		P_{k}&= transission\ of\ the\ k^{th}\ path \\
+		\Delta_{k}&= the\ cofactor\ of\ the\ k^{th}\ path \\
+		\Delta_{\bullet}&= the\ graph\ determinant\
+	\end{align*}
+	
+	Which is more helpful as:
+	\begin{align*}
+		\Delta_{k}&= the\ cofactor\ of\ the\ k^{th}\ path \\
+		\Delta_{\bullet}&= 1 - \sum_{i}L_i + \sum_{i,j}L_i' L_j'  - \sum_{i,j,k}L_i'' L_j''L_k'' + ... \\
+	\end{align*}
+	with $L_i'L_j'$ being the product of any two loops that do not have a node or branch in common, and so on for the ones with more loops.
+	
+\end{section}
+
+\begin{section}{Examples}
+	
+	
+	
+\end{section}
+
+\end{document}
