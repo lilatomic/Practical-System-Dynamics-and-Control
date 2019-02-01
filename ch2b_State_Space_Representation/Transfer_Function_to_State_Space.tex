@@ -1,0 +1,88 @@
+\documentclass{../templates/topic}
+
+\title{Transfer Function to State Space}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+
+\begin{section}{Strictly Proper}
+	
+	\subsection{The long way}
+	
+	The first thing to do is to convert from the TF to a DE.
+	
+	This gives $\dddot{y} + a_1\ddot{y} + a_2\dot{y} + a_3y = b_0u$, from which we can define
+	
+	\begin{align*}
+		q_1 &= y \\
+		q_2 &= \dot{y} \\
+		q_3 &= \ddot{y} \\
+	\end{align*}
+		
+	Then we get
+	\begin{alignat*}{3}
+		\dot{q_1}&=\dot{y}&&= q_2 &&\\
+		\dot{q_2}&=\ddot{y}&&= q_3 &&\\
+		\dot{q_3}&=\dddot{y}&&= b_0u - a_1\ddot{y} - a_2\dot{y} - a_3y &&= b_0u - a_1 q_3 - a_2 q_2 - a_3 q_1	\\
+	\end{alignat*}
+	
+	We can then represent this in a matrix
+	\[
+	\dot{q}=Aq+Bu=
+		\begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 1 \\
+			-a_3 & -a_2 & -a_1
+		\end{bmatrix}
+		q +
+		\begin{bmatrix}
+			0 \\ 0 \\ b_0
+		\end{bmatrix}
+		u
+	\]
+	
+	Also, the corresponding equations for $y$ are simply:
+	\[
+	y = C\vec{q}+D\vec{u}=[1, 0, 0]\vec{q} + \vec{0} u
+	\]
+	
+	\subsection{The short way}
+	
+	For a TF defined as
+	\begin{equation*}
+		G(s)=\frac{\sum\limits_{i=1}^k{n_{i}s^{k-i}}}{\sum\limits_{i=0}^k{d_{i}s^{k-i}}}
+	\end{equation*}
+	Specifically, as $G(s)=\frac{n_1s^3+n_2s^2+n_3s+n_4}{s^4+d_1s^3+d_2s^2+d_3s+d_4}$
+	simply build the system with
+	\[
+	\dot{q}=Aq+Bu=
+		\begin{bmatrix}
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 1 \\
+			-d_4 & -d_3 & -d_2 & -d_1
+		\end{bmatrix}
+		q +
+		\begin{bmatrix}
+			0 \\ 0 \\ 0 \\ 1
+		\end{bmatrix}
+		u
+	\]
+	and
+	\[
+	y = C\vec{q}+D\vec{u}=[n_4, n_3, n_2, n_1]\vec{q}
+	\]
+	
+	Note that this gives the Controllable Cannonical Form. Transposing the A matrix and interchanging the B and C matrices gives the Observable Cannonical Form.
+\end{section}
+
+\begin{section}{Proper}
+	% TODO: Transfer_Function_to_State_Space::Proper
+\end{section}
+
+\begin{section}{Improper}
+	% TODO: Transfer_Function_to_State_Space::Improper
+\end{section}
+
+\end{document}

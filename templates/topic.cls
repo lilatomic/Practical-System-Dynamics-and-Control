@@ -9,6 +9,7 @@
 \usepackage{mathtools}
 \usepackage{mcode}
 \usepackage{amssymb}
+\usepackage{esvect}
 
 % Math Symbols
 
