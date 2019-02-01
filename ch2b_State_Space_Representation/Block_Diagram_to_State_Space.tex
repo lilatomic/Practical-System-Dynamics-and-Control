@@ -1,0 +1,28 @@
+\documentclass{../templates/topic}
+
+\title{Block Diagram to State Space}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+
+\begin{section}{Steps}
+	
+	\subsection{Label State Variables}
+		Begin with the labelling of state variables. The easiest way to do this is to start at the last integrator block. Place an $x_1$ after it. Working backwards, place another $x_i$ after each integrator block.
+		
+	\subsection{Label State Variable Derivatives}
+		Simply place the derivative of each state variable before the integrator blocks.
+		
+	\subsection{Equate Derivatives with Values}
+		Use the block diagrams to assign values to each of the state variable derivatives in terms of the state variables and the input variables. This is as simple as tracing the lines which feed into the signal for labelled with the state variable derivative until the lines become a state variable or input variable.
+		
+	\subsection{Construct Matrices}
+		The A-matrix and B-matrix are straightforward to construct from the equations. The B-matrix pulls all the terms involving the input variables, and the A-matrix is simply the matrixification of the state-space terms.
+		
+		The C-matrix and D-matrix terms are also easy to construct. Simply express Y as a function of the state and input variables. The D-matrix pulls all the terms involving the input variables, and the C-matrix is simply the matrixification of the state-space terms.
+	
+	
+\end{section}
+
+\end{document}
