@@ -1,0 +1,39 @@
+\documentclass{../templates/topic}
+
+\title{State Space to Transfer Function}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+
+\begin{section}{Definition}
+	The TF can be derived simply with the application of the formula
+	\begin{equation}
+		G(s)=\frac{Y}{U}=(C\cdot INV[s\vec{1}-A]\cdot B+D)
+	\end{equation}
+\end{section}
+
+\begin{section}{Derivation}
+	
+	With
+	\begin{align}
+		\dot{X}&=AX+BU\\
+		Y&=CX+DU
+	\end{align}
+	The $\laplace$ gives
+	\begin{align}
+		\laplace{X}(s)&=sX(s)=AX+BU(s)\\
+		\laplace{Y}(s)&=\ Y(s)=CX(s)+DU(s)
+	\end{align}
+	Rearanging gives
+	\begin{align}
+		(s\vec{1}-A)X(s)&=BU(s)\\
+		X(s)&=(s\vec{1}-A)BU(s)\\
+	\end{align}
+	And substituting $X(s)$ from above
+	\begin{equation}
+		Y(s)=(C\cdot INV[s\vec{1}-A]\cdot B+D)U(s)
+	\end{equation}
+\end{section}
+
+\end{document}
