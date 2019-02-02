@@ -10,6 +10,24 @@
 \end{section}
 
 \begin{section}{Special Cases}
+	\begin{subsection}{Complex Conjugate}
+		With a second-order or higher denominator, it is possible that the denominator has complex factors.
+		One solution is to simply accept that the roots will be complex and use complex conjugates:
+		\begin{equation*}
+			\frac{U}{s^2+2s+5}=\frac{A}{s+1-2\hat{j}}+\frac{B}{s+1+2\hat{j}}
+		\end{equation*}
+		Alternatively, you can leave it uncomplexified, and simply as a second order term.
+		\begin{equation*}
+			\frac{U}{s^2+1}=\frac{C_1s+C_0}{s^2+1}
+		\end{equation*}
+		
+		Doing this makes it easy to rearange it into a form amenable for $\sin$ or $\cos$.
+		\begin{equation*}
+			\frac{C_1s+C_0}{s^2+2s+5}=\frac{C_1s}{(s+1)^2+2^2}+\frac{C_0}{(s+1)^2+2^2}
+		\end{equation*}
+		Or you can just use the table of common $\ilaplace$ to not have to do the rearanging.
+	\end{subsection}
+	
 	\begin{subsection}{Repeated Factor}
 		% TODO: Add subsection: Partial Fraction Decomposition::Repeated Factor
 	\end{subsection}
