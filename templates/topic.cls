@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lilatomic-topic}[Class for the topics Lilatomic uses]
 
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
 \LoadClass{report}
@@ -20,7 +22,8 @@
 \def\ustep{\Rsh\mathllap{u} }
 \def\impulse{\upharpoonleft\mathllap{\delta}}
 
+% Formatting elements
 
-
+\newcommand*{\definition}[1]{\textcolor{red}{\framebox{\strut DEF}} \textcolor{Cerulean}{#1} \textcolor{red}{:}}
 
 \endinput
