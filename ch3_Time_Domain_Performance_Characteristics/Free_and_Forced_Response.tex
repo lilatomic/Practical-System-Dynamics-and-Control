@@ -1,0 +1,25 @@
+\documentclass{../templates/topic}
+
+\begin{document}
+\chapter{Free and Forced Response}
+
+\begin{section}{Definition}
+	The free response of a system is the response to the initial conditions, with no forcing functions.
+	
+	The forced response of a system is the response to the forcing function with 0 initial conditions.
+	
+\end{section}
+
+\begin{section}{From Differential Equation}
+	Given a DE with initial conditions
+	
+	\begin{align}
+		\ddot{y}+2\dot{y}+2y&=u\\
+		(s^2+2s+2)Y&=U+sy(0)+\dot{y}(0)+2y(0)\\
+		Y&=\textcolor{blue}{\frac{U}{(s^2+2s+2)}}+\textcolor{olive}{\frac{\dot{y}(0)}{(s^2+2s+2)}+\frac{(s+2)y(0)}{(s^2+2s+2)}}\\
+		Y&=\textcolor{blue}{Forced Response}+\textcolor{olive}{Free Response}
+	\end{align}
+	
+\end{section}
+
+\end{document}
