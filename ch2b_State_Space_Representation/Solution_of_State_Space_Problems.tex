@@ -1,0 +1,55 @@
+\documentclass{../templates/topic}
+
+\title{Solution of State Space Problems}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+
+\begin{section}{Zero Input Solution}
+	
+	\subsection{Definition}
+	
+		For a system defined as
+		\begin{align}
+			\dot{q}&=Aq+Bu \\
+			y&= Cq+Du
+		\end{align}
+		the Zero Input Problem is given as
+		\begin{align}
+			\dot{q}&=Aq \\
+			y&= Cq
+		\end{align}
+		on account of the input being zero and all that.
+		
+	\subsection{Solution}
+		We begin by taking the $\laplace$.
+		We then solve for $Q(s)$. The shortmode gives
+		\begin{equation}
+			Q=\Phi\cdot q(0^-)
+		\end{equation}
+		The inverse laplace transform gives
+		\begin{equation}
+			q=\phi\cdot q(0^-)
+		\end{equation}
+		
+		Which can be substituted back into the equation for $y$ to give
+		\begin{equation}
+			y(t)=C\cdot q(t)=C\phi\cdot q(0^-)
+		\end{equation}
+	
+\end{section}
+
+\begin{section}{Zero State Solution}
+	
+\end{section}
+
+\begin{section}{General Solution}
+	
+\end{section}
+
+\begin{section}{References}
+	http://lpsa.swarthmore.edu/Transient/TransMethSS.html
+\end{section}
+
+\end{document}
