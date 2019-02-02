@@ -1,15 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lilatomic-topic}[Class for the topics Lilatomic uses]
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
-\LoadClass{article}
+\LoadClass{report}
 
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{mcode}
 \usepackage{amssymb}
 \usepackage{esvect}
+
+\usepackage{xcolor}
 
 % Math Symbols
 
