@@ -1,0 +1,26 @@
+\documentclass{../templates/topic}
+
+\title{Principal Coordinates}
+\author{Daniel "lilatomic" Goldman}
+
+\begin{document}
+\maketitle
+\begin{section}{Utility}
+	This decouples the equations, which makes manipulating them mathematically much easier.
+\end{section}
+
+\begin{section}{Steps}
+	\subsection{Find Eigenvalues and Eigenvectors}
+		Letting the eigenvalues be $\lambda_n$, the matrix of corresponding eigenvectors be $E=[e_1, \dots, e_n]$, and the matrix of $DIAG[\lambda_i]=\Lambda$
+		
+	\subsection{Transform}
+	\begin{align}
+		\tilde{A} &= E^{-1}AE = \Lambda \\
+		\tilde{B} &= E^{-1}B \\
+		\tilde{C} &= CE \\
+		\tilde{D} &= D
+	\end{align}
+\end{section}
+	
+
+\end{document}
