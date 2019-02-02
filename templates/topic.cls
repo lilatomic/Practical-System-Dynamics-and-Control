@@ -13,6 +13,9 @@
 \usepackage{amssymb}
 \usepackage{esvect}
 
+\usepackage{subcaption}
+\usepackage{graphicx}
+
 \usepackage{xcolor}
 
 \usepackage{indentfirst}
