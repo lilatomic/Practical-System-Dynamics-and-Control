@@ -13,6 +13,7 @@
 \usepackage{amssymb}
 \usepackage{esvect}
 
+\usepackage{float}
 \usepackage{subcaption}
 \usepackage{graphicx}
 
