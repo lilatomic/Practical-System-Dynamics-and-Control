@@ -1,0 +1,33 @@
+\documentclass{../templates/topic}
+
+\begin{document}
+
+\chapter{Canonical Form of 2nd Order Equations}
+
+\begin{section}{Definition}
+	The Canonical Form is the form where the parameters have some relation to thebehaviour of the system which society has deemed useful.
+	
+	For a system defined as
+	\begin{equation}
+		\frac{K}{J*s^2+B*s+K}=\frac{\frac{K}{J}}{s^2+\frac{B}{J}s+\frac{K}{J}}
+	\end{equation}
+	
+	the cannonical form is given as
+	\begin{equation}
+		\frac{\omega_n^2}{s^2+2\zeta\omega_n s + \omega_n^2}
+	\end{equation}
+	which leads naturally to the following mapping
+	\begin{align}
+		\omega_n &= \sqrt{\frac{K}{J}}\\
+		\zeta &= \frac{B}{2\sqrt{JK}}
+	\end{align}
+	
+\end{section}
+
+\begin{section}{Application}
+	% TODO: Canonical_Form_2nd_Order::Application_zeta
+	% TODO: Canonical_Form_2nd_Order::Application_omegan
+	% TODO: Canonical_Form_2nd_Order::Application_omegad
+\end{section}
+
+\end{document}
