@@ -15,6 +15,7 @@
 
 \usepackage{xcolor}
 
+\usepackage{indentfirst}
 % Math Symbols
 
 \def\laplace{L\mathclap{\rightarrow}\ }
