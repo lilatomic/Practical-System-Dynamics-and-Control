@@ -1,0 +1,63 @@
+\documentclass{../templates/topic}
+
+\begin{document}
+\chapter{Electrical Systems}
+
+\begin{section}{Elements}
+	\begin{itemize}
+		\item Resistor
+		\item Capacitor
+		\item Inductor
+		\item Voltage Generator
+		\item Current Generator
+		\item Transformer
+		\item Gyrator
+	\end{itemize}
+\end{section}
+
+\begin{section}{Impedance}
+	\definition{Impedance} $Z(s)=\frac{V(s)}{I(s)}$
+	
+	\subsection{Network Impedance}
+	Impedances function like resistances:
+	\subsubsection*{Series}
+	Series impedances are additive
+	\begin{equation}
+		Z_{eq} = \sum_{i}^{n}{R_i}
+	\end{equation}
+	\subsubsection*{Parallel}
+	Parallel impedances are reciprocally additive
+	\begin{equation}
+		Z_{eq} = (\sum_{i}^{n}{\frac{1}{R_i}})^{-1}
+	\end{equation}
+\end{section}
+
+\begin{section}{Analysis}
+	There are two main techniques to use:
+	\subsection{Voltage Law}
+		The potential around any loop to the same point is 0
+	\subsection{Current Law}
+		The sum of current into any node is 0
+\end{section}
+
+\begin{section}{The Universal Analogy}
+	Electrical systems will often be used as an intermediate model when analysing other systems. These systems have the Voltage and Current laws easily formulated, making analysis more straightforward.
+	
+	\subsection{Impedance Analog}
+		The Impedance Analog defines
+		\begin{itemize}
+			\item Potential represents Force
+			\item Flux represents Velocity
+		\end{itemize}
+	
+	\subsection{Mobility Analog}
+		The Mobility Analog defines
+		\begin{itemize}
+			\item Potential represents Velocity
+			\item Flux represents Force
+		\end{itemize}
+	\subsection{Equivalence of Analogs}
+		
+\end{section}
+
+\end{document}
