@@ -1,0 +1,37 @@
+\documentclass{../templates/topic}
+
+\begin{document}
+\chapter{Bode Plots}
+
+\begin{section}{Definition}
+	A Bode Plot shows the Gain and Phase response of a system at different frequencies. These are placed on two separate graphs.
+	The axis of the Gain is logarithmic, and is therefore delimited in deciBels.
+\end{section}
+
+\begin{section}{Extimating by Hand}
+	Drawing a Bode plot is really easy with many analysis packages, but occasionally you might be foreced to doit by hand.
+	
+	We begin by remembering that all high-order systems can be rewritten as a sum of 1 and 2 order systems. We therefore only need to know how to plot those systems, and how to add systems together.
+	
+	\subsection{1-Order Real Zero}
+		Gain: 0 until $1/\tau$, $20\frac{dB}{decade}$
+	\subsection{1-Order Real Pole}
+		Gain: 0 until $1/\tau$, $-20\frac{dB}{decade}$
+	\subsection{2-Order Complex Zero}
+		Gain: 0 until $\omega_n$, $40\frac{dB}{decade}$
+		
+		Peak: $\omega = \omega_r = \omega_n*\sqrt{1-2\zeta^2}$
+		
+		Peak Gain: $\abs{G}=(2\zeta\sqrt{1-\zeta^2})^{-1}$
+		
+	\subsection{2-Order Complex Pole}
+		Gain: 0 until $\omega_n$, $-40\frac{dB}{decade}$
+	
+		Peak: $\omega = \omega_r = \omega_n*\sqrt{1-2\zeta^2}$
+		
+		Peak Gain: $\abs{G}=(2\zeta\sqrt{1-\zeta^2})^{-1}$
+	
+\end{section}
+
+
+\end{document}
