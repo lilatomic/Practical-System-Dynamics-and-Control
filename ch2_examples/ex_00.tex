@@ -1,0 +1,49 @@
+\documentclass{../templates/topic}
+
+% TODO: ch2::ex_00::add_pictures
+
+\begin{document}
+\section{Example}
+
+\subsection{Statement}
+Starting from the following block diagram:
+\begin{itemize}
+	\item Convert to SFG
+	\item Write TF
+	\item Convert to SSR
+\end{itemize}
+
+\subsection{SFG}
+We begin with the SFG
+
+This process is straightforward, and following the instructions will work out fine.
+
+% TODO: ch2::ex_00::convert_to_SFG
+
+\subsection{SSR}
+We find the SSR before finding the TF because the SSR allows us to use the intermediate variables. This allows us to delay having to solve directly for inputs.
+
+We use the standard instructions for converting a block diagram to SSR:
+
+\begin{itemize}
+	\item Label State Variables
+	
+	\item Label variable derivatives
+	
+	\item Equate derivatives with values
+	
+	\item Construct Matrices
+\end{itemize}
+
+\subsection{TF}
+\subsubsection{From SSR}
+Once we have the SSR, we can easily convert to the TF by using the standard instructions.
+
+\subsubsection{From Block Diagram}
+Because the problem deals with a MIMO system, solving directly for the TF is annoying and difficult.
+
+This will give us a system where the TFs are entangled. They can be solved, but honestly it's almost easier to just build the SSR and convert it.
+
+
+
+\end{document}
