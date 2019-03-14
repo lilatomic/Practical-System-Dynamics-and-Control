@@ -1,0 +1,45 @@
+\documentclass{../templates/topic}
+
+\begin{document}
+\chapter{Mechanical Analogs}
+
+\begin{section}{The Analogies}
+	\subsection{Impedance Analog}
+		The Impedance Analog defines
+		\begin{itemize}
+			\item Potential represents Force
+			\item Flux represents Velocity
+		\end{itemize}
+		The impedance analogy is nice because the differential equations look mostly like they should. That is, mass is still near the 2nd derivative, dampers are near the 1st derivative, springs are at the 0th. This means that the DE looks about how you would expect it to, and you can use your intuition of the DE to help validate the electrical analog. The disadvantage is that this causes the mechanical topology to differ from the electrical topology.
+		
+		Common Elements
+		\begin{itemize}
+			\item Mass : Inductor in path
+			\item Spring : Capacitor
+			\item Damper/friction : Resistor
+			\item Force : Voltage source, from ground
+			\item Velocity Generator : Current source, from ground
+		\end{itemize}
+
+	\subsection{Mobility Analog}
+		The Mobility Analog defines
+		\begin{itemize}
+			\item Potential represents Velocity
+			\item Flux represents Force
+		\end{itemize}
+		
+		Common Elements
+		\begin{itemize}
+			\item Mass : Capacitor to ground
+			\item Spring : Inductor in path
+			\item Damper/friction : Resistor, with compliance $r = 1/R$
+			\item Force Generator : Current source, from ground
+			\item Velocity Generator : Voltage source, from ground
+		\end{itemize}
+		
+	\subsection{Equivalence of Analogs}
+		The two analogs are dual to each other.
+
+\end{section}
+
+\end{document}
