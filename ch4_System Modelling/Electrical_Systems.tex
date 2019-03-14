@@ -29,6 +29,7 @@
 		\item Current Generator : Supplies constant flux regardless of potential difference $Z=\infty$
 		\item Transformer : $e_2 = ne_1$; $i_2 = \frac{1}{n}i_1$
 		\item Gyrator : Interchange potential and flux. It is most useful conceptually, as it allows different models to be bridged.
+		\item Op-amp : A differential amplifier with theoretically infinite gain. See analysis below
 	\end{itemize}
 \end{section}
 
@@ -39,6 +40,18 @@
 		The potential around any loop to the same point is 0
 	\subsection{Current Law}
 		The sum of current into any node is 0
+		
+	\subsection{Op-Amps}
+		Op-amps require a bit of special analysis. Just remember the 2 rules for analysing op-amps:
+		\begin{itemize}
+			\item No current flows into the input terminals
+			\item (With negative feedback) The voltage difference at the input terminals is zero
+		\end{itemize}
+		
+		This makes it much easier to deal with op amps
+		
+		% TODO: Electrical_Systems::Op-Amps::Example
+		
 \end{section}
 
 \begin{section}{The Universal Analogy}
